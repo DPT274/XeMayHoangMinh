@@ -8,12 +8,12 @@ export default function Home() {
   const [showContacts, setShowContacts] = useState(false);
 
   const mainImages = [
-    "https://images.unsplash.com/photo-1486006396193-471068589dca?q=80&w=1200",
+    "",
     "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200"
   ];
 
   const sideImages = [
-    "https://images.unsplash.com/photo-1632823471565-1ec2c63dbd0c?q=80&w=800", // Ảnh thợ sửa xe
+    "", // Ảnh thợ sửa xe
     "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=800", // Ảnh thay dầu
     "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800"  // Ảnh kiểm tra máy
   ];
@@ -30,9 +30,15 @@ export default function Home() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setStatus('Đang gửi...');
-    const { error } = await supabase.from('lich_hen').insert([formData]);
-    if (error) setStatus('Lỗi kết nối!');
-    else {
+
+    // Đoạn này sẽ giúp in thẳng lỗi ra màn hình để chúng ta biết tại sao Supabase từ chối
+    const { data, error } = await supabase.from('lich_hen').insert([formData]);
+
+    if (error) {
+      console.error("LỖI TỪ SUPABASE:", error);
+      // Hiển thị thẳng nguyên nhân lỗi ra giao diện cho dễ nhìn
+      setStatus(`Lỗi: ${error.message}`);
+    } else {
       setStatus('Gửi thành công!');
       setFormData({ ten_khach_hang: '', so_dien_thoai: '', loai_xe: '', van_de: '' });
     }

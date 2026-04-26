@@ -55,19 +55,18 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 pb-12">
             <div>
               <h3 className="text-xl font-bold mb-4 border-l-4 border-yellow-400 pl-3">THÔNG TIN LIÊN HỆ</h3>
-              <p className="mb-2">📍 <strong>Địa chỉ:</strong> Số 123 Đường Sửa Xe, Quận Thủ Đức, TP. HCM</p>
-              <p className="mb-2">📞 <strong>Hotline:</strong> 0912.345.678 (Anh Minh)</p>
+              <p className="mb-2">📍 <strong>Địa chỉ:</strong> 1278 TL 10, Quận Bình Tân, Tp. Hồ Chí Minh </p>
+              <p className="mb-2">📞 <strong>Hotline:</strong> 0786346716 (Anh Minh)</p>
               <p className="mb-2">⏰ <strong>Giờ làm việc:</strong> 08:00 - 18:00 (T2 - CN)</p>
             </div>
             <div className="h-64 rounded-lg overflow-hidden border-2 border-white/20">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.485398611065!2d106.7693382!3d10.8506324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752763f2381667%3A0x28054034870533!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTxrAgcGjhuqFtIEvhu7kgdGh14bqtdCBUUC5IQ00!5e0!3m2!1svi!2s!4v1714123456789"
-                width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
+                src="https://maps.app.goo.gl/WXpqkjrjxtANLyYr7"
               ></iframe>
             </div>
           </div>
           <div className="bg-black/20 py-4 text-center text-sm">
-            © 2026 HOÀNG MINH GARAGE - ĐỐI TÁC CHIẾN LƯỢC CASTROL
+            © 2026 HOÀNG MINH GARAGE - Developer
           </div>
         </footer>
 
