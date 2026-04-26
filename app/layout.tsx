@@ -61,10 +61,17 @@ export default function RootLayout({
             </div>
             <div className="h-64 rounded-lg overflow-hidden border-2 border-white/20">
               <iframe
-                src="https://maps.app.goo.gl/WXpqkjrjxtANLyYr7"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7185957156817!2d106.59080547363476!3d10.756157459570089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c520f4c483b%3A0xa8642edcbdeeb4f6!2zUUg0VitGODksIDEyNzggVEwxMCwgQW8gxJDDtGksIFTDom4gVOG6oW8sIEjhu5MgQ2jDrSBNaW5oIDcwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1777206913493!5m2!1svi!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-          </div>
+          </div> {/* <--- CHÍNH LÀ THẺ DIV ĐÓNG BỊ THIẾU Ở ĐÂY */}
+
           <div className="bg-black/20 py-4 text-center text-sm">
             © 2026 HOÀNG MINH GARAGE - Developer
           </div>
